@@ -1,0 +1,2849 @@
+{
+	"info": {
+		"_postman_id": "b3ed06d6-a8c2-4f14-875b-1efbcbac417d",
+		"name": "travelling_agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22989774"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Destination_category",
+					"item": [
+						{
+							"name": "Add Destination",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "destination_name",
+											"value": "goa",
+											"type": "text"
+										},
+										{
+											"key": "destination_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/240_F_251491428_eojd9JQquq6qZXTbWJYWeTFqOVDbqmiL-removebg-preview.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addDestination",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addDestination"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all destination",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/allDestination",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allDestination"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destination by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/manageDestinationById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"manageDestinationById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Destination",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "destination_name",
+											"value": "lahaul spiti",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateDestination",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateDestination"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change destination status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64019a81debd8fe0a3b45d48",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeDestinationStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeDestinationStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "place",
+					"item": [
+						{
+							"name": "add places",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "place_name",
+											"value": "goa beach",
+											"type": "text"
+										},
+										{
+											"key": "place_description",
+											"value": "nyc beach of goa ",
+											"type": "text"
+										},
+										{
+											"key": "place_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/6991089_3499029.jpg"
+										},
+										{
+											"key": "destinationId",
+											"value": "64019a81debd8fe0a3b45d48",
+											"type": "text"
+										},
+										{
+											"key": "cityId",
+											"value": "6401a5f104c28cb11aa3699f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addPlaces",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addPlaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all places",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "destinationId",
+											"value": "64019a81debd8fe0a3b45d48",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/allPlaces",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allPlaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view places by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewplacesById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewplacesById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update places",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "place_name",
+											"value": "komic village",
+											"type": "text"
+										},
+										{
+											"key": "place_description",
+											"value": "last village og india",
+											"type": "text"
+										},
+										{
+											"key": "place_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/3034380_439446-PETNL7-582.jpg"
+										},
+										{
+											"key": "_id",
+											"value": "6400461b0ff84a86bfb658bc",
+											"type": "text"
+										},
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updatePlaces",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updatePlaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change status places",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401a6d104c28cb11aa369b2",
+											"type": "text"
+										},
+										{
+											"key": "Place_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeStatusPlaces",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeStatusPlaces"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "city",
+					"item": [
+						{
+							"name": "add city",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "city_name",
+											"value": "jalandhar",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "punjab",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addcity",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addcity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all cities",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllCity",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllCity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view cities by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewcitiesById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewcitiesById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update city",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "city_name",
+											"value": "phagwara",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "punjab",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateCity",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateCity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change status city",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401a5f104c28cb11aa3699f",
+											"type": "text"
+										},
+										{
+											"key": "city_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeStatusCity",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeStatusCity"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "hotels",
+					"item": [
+						{
+							"name": "add hotels",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "hotel_name",
+											"value": "beeach view hotel",
+											"type": "text"
+										},
+										{
+											"key": "hotel_description",
+											"value": "good hotel with good food",
+											"type": "text"
+										},
+										{
+											"key": "per_day_price",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "hotel_contact",
+											"value": "998877665",
+											"type": "text"
+										},
+										{
+											"key": "hotel_address",
+											"value": "near sea shore",
+											"type": "text"
+										},
+										{
+											"key": "hotel_email",
+											"value": "beachview@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "hotel_location",
+											"value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3408.637999330631!2d75.590987!3d31.313749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a4c6fae8ba9%3A0xd49b2f292eb27999!2sO7services%20IT%20Training%20in%20Jalandhar!5e0!3m2!1sen!2sin!4v1677319571364!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "placesId",
+											"value": "640990a551a89459c394c665",
+											"type": "text"
+										},
+										{
+											"key": "destinationId",
+											"value": "64019a81debd8fe0a3b45d48",
+											"type": "text"
+										},
+										{
+											"key": "hotel_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/IMG-20230308-WA0000.jpg"
+										},
+										{
+											"key": "cityId",
+											"value": "6401a5f104c28cb11aa3699f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addHotels",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addHotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all hotels",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "placesId",
+											"value": "640990a551a89459c394c665",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllhotels",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllhotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view hotels by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64019463f9564039f90ff250",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewHotelsById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewHotelsById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update hotels",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "placesId",
+											"value": "6400461b0ff84a86bfb658bc",
+											"type": "text"
+										},
+										{
+											"key": "hotel_name",
+											"value": "updated hotel name",
+											"type": "text"
+										},
+										{
+											"key": "per_day_price",
+											"value": "11000",
+											"type": "text"
+										},
+										{
+											"key": "hotel_contact",
+											"value": "9988876654",
+											"type": "text"
+										},
+										{
+											"key": "hotel_address",
+											"value": "old manali near hadimba temple",
+											"type": "text"
+										},
+										{
+											"key": "hotel_image",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/pngwing.com.png"
+										},
+										{
+											"key": "hotel_email",
+											"value": "mountaintop@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "hotel_location",
+											"value": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/A3xDLX-w1qA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "64004874e12346a5c7d7eef7",
+											"type": "text"
+										},
+										{
+											"key": "hotel_description",
+											"value": "hotel is perfect",
+											"type": "text"
+										},
+										{
+											"key": "cityId",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateHotels",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateHotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change hotel status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "640992710fd5ae8b966aadd5",
+											"type": "text"
+										},
+										{
+											"key": "hotel_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeHotelStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeHotelStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "gunkaran ",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "gunkaran@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "009988787",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "sdakhgsjgn",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "jal",
+											"type": "text"
+										},
+										{
+											"key": "id_proof",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/pngwing.com (1).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/userRegister",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"userRegister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gunkaran@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/userLogin",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"userLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "travelling",
+					"item": [
+						{
+							"name": "add travelling",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from_city",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "to_destination",
+											"value": "64019714b3e75fe41098dd1f",
+											"type": "text"
+										},
+										{
+											"key": "mode_of_travel",
+											"value": "[{\"mode_name\":\"car\",\"price_per_person\":\"200\"}\n]",
+											"type": "text"
+										},
+										{
+											"key": "travelling_distance",
+											"value": "390 km",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTravelling",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTravelling"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all travelling",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllTravelling",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllTravelling"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view travelling By id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64004f2124c6d1a8626af117",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTravellingById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTravellingById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update travelling",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from_destination",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "to_destination",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "mode_of_travel",
+											"value": "[{\"mode_name\":\"bullet\",\"price_per_person\":\"1500\"}]",
+											"type": "text"
+										},
+										{
+											"key": "travelling_distance",
+											"value": "500 km",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "64004f2124c6d1a8626af117",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTravelling",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTravelling"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change status Travelling",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64004f2124c6d1a8626af117",
+											"type": "text"
+										},
+										{
+											"key": "travelling_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changestatusTravelling",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changestatusTravelling"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "all booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/allBooking",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Booking By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400515397a833ae60a82b7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewBookingsById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewBookingsById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change status of Booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400515397a833ae60a82b7a",
+											"type": "text"
+										},
+										{
+											"key": "booking_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeStatusBooking",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeStatusBooking"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transport",
+					"item": [
+						{
+							"name": "add transport",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from_city",
+											"value": "6401a5f104c28cb11aa3699f",
+											"type": "text"
+										},
+										{
+											"key": "to_destination",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										},
+										{
+											"key": "mode_of_transport",
+											"value": "[{\"transport_name\":\"bike\",\"transport_cost\":\"2200\"}\n]",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTransport",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTransport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all transport",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/allTransport",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allTransport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view transport by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400534edcac9db418da63ca",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTransportById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTransportById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Transport",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from_destination",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "to_destination",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "mode_of_transport",
+											"value": "[{\"transport_name\":\"bike\",\"transport_cost\":\"1500\"}\n]",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6401a930fe28ba9c98e53e4a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTransport",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTransport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeTransportStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64099e33324ac35d72df2f9e",
+											"type": "text"
+										},
+										{
+											"key": "transport_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeTransportStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeTransportStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "packages",
+					"item": [
+						{
+							"name": "add packages",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "placeId",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										},
+										{
+											"key": "TransportId",
+											"value": "6401b71b610cfca47f79ebd2",
+											"type": "text"
+										},
+										{
+											"key": "package_name",
+											"value": "trek packages",
+											"type": "text"
+										},
+										{
+											"key": "package_cost",
+											"value": "15000",
+											"type": "text"
+										},
+										{
+											"key": "no_of_person",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addPackages",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addPackages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all packages",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/allPackages",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allPackages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view packages by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400570267ad38006690d029",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewPackagesById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewPackagesById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Packages",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "placeId",
+											"value": "6400461b0ff84a86bfb658bc",
+											"type": "text"
+										},
+										{
+											"key": "TransportId",
+											"value": "640055a5816ee9d71ef15c52",
+											"type": "text"
+										},
+										{
+											"key": "package_name",
+											"value": "college trip",
+											"type": "text"
+										},
+										{
+											"key": "package_cost",
+											"value": "60000",
+											"type": "text"
+										},
+										{
+											"key": "no_of_person",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6400570267ad38006690d029",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updatePackages",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updatePackages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Packages Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400570267ad38006690d029",
+											"type": "text"
+										},
+										{
+											"key": "packageStatus",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changePackagesStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changePackagesStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reviews",
+					"item": [
+						{
+							"name": "all reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/allReviews",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"allReviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Reviews by Id Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64005f980723874a283de825",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewReviewById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewReviewById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change review status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64005f980723874a283de825",
+											"type": "text"
+										},
+										{
+											"key": "review_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeReviewStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeReviewStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transport company",
+					"item": [
+						{
+							"name": "add transport company",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "transport_company_name",
+											"value": "tour and travels",
+											"type": "text"
+										},
+										{
+											"key": "transport_company_description",
+											"value": "deals with mountains trips",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTransportCompany",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTransportCompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all transport company",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllTransportCompany",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllTransportCompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view transport company by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTransportCompanyById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTransportCompanyById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update transport company",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "transport_company_name",
+											"value": "freinds tour and travels",
+											"type": "text"
+										},
+										{
+											"key": "transport_company_description",
+											"value": "deals in beaches",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6401c04454f71872d73070bc",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTransportCompany",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTransportCompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change transport company status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401c04454f71872d73070bc",
+											"type": "text"
+										},
+										{
+											"key": "transport_company_status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeTransportCompanyStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeTransportCompanyStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transport company pricing",
+					"item": [
+						{
+							"name": "add transport company pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "transportCompanyId",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										},
+										{
+											"key": "fromCity",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "toCity",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										},
+										{
+											"key": "chargesPerPerson",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "transportType",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addTransportCompanyPricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addTransportCompanyPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all transport company pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewAllTransportCompanypricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewAllTransportCompanypricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view transport company pricing by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402ddc0936e1e4317197037",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTransportCompanyPricingById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTransportCompanyPricingById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update transport company pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "transportCompanyId",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										},
+										{
+											"key": "fromCity",
+											"value": "6400473993a4ea14931e7e3f",
+											"type": "text"
+										},
+										{
+											"key": "toCity",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										},
+										{
+											"key": "chargesPerPerson",
+											"value": "2000",
+											"type": "text"
+										},
+										{
+											"key": "transportType",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6402ddc0936e1e4317197037",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTransportCompanyPricing",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTransportCompanyPricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Transpor tCompany Pricing Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402ddc0936e1e4317197037",
+											"type": "text"
+										},
+										{
+											"key": "transportCompanyStatus",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeTransportCompanyPricingStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeTransportCompanyPricingStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transport company order",
+					"item": [
+						{
+							"name": "add transport orders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "pricingId",
+											"value": "6402ebb686e6a7c62f150059",
+											"type": "text"
+										},
+										{
+											"key": "noOfPerson",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "totalCharges",
+											"value": "15000",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "64004e419f40e8f7e6e0fba2",
+											"type": "text"
+										},
+										{
+											"key": "transportCompanyId",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/addtransportOrder",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"addtransportOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view all orders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}admin/viewallorders",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewallorders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Transport Orders By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402f697cff6d81de573f2ee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewTransportOrdersById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewTransportOrdersById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update transport orders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "pricingId",
+											"value": "6402ebb686e6a7c62f150059",
+											"type": "text"
+										},
+										{
+											"key": "noOfPerson",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "totalCharges",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "64004e419f40e8f7e6e0fba2",
+											"type": "text"
+										},
+										{
+											"key": "transportCompanyId",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6402f697cff6d81de573f2ee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/updateTransportOrders",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"updateTransportOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Transport Oder Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402f697cff6d81de573f2ee",
+											"type": "text"
+										},
+										{
+											"key": "transportOrderStatus",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/changeTransportOderStatus",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"changeTransportOderStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "Destination category",
+					"item": [
+						{
+							"name": "view all destination",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllDestination",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllDestination"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view destination by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f9a40101baa7184ab3747d",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewDestinationById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewDestinationById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "places",
+					"item": [
+						{
+							"name": "view all places",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "destinationId",
+											"value": "64019a81debd8fe0a3b45d48",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllPlaces",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllPlaces"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Places by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f9bde4db8d09a29a9f6e07",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewPlacesById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewPlacesById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "hotels",
+					"item": [
+						{
+							"name": "view all Hotels",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "placesId",
+											"value": "640990a551a89459c394c665",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllHotels",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllHotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Hotel by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f9ed8de13f6634cffb6a2b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewHotelById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewHotelById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "city",
+					"item": [
+						{
+							"name": "view All City",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllCIty",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllCIty"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view City By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f0626d0234e873cf869eec",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewCityById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewCityById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Travelling",
+					"item": [
+						{
+							"name": "view All Travelling",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTravelling",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTravelling"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Travelling By id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f9e144038ea8d3b0e02770",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTravellingById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTravellingById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transport",
+					"item": [
+						{
+							"name": "veiw All Transport",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTransport",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTransport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Transport By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "63f32282b386adbb98f896e0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTransportById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTransportById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reviews",
+					"item": [
+						{
+							"name": "add reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "review",
+											"value": "nyc....!!",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "64004e419f40e8f7e6e0fba2",
+											"type": "text"
+										},
+										{
+											"key": "hotelId",
+											"value": "64004874e12346a5c7d7eef7",
+											"type": "text"
+										},
+										{
+											"key": "placeId",
+											"value": "6400461b0ff84a86bfb658bc",
+											"type": "text"
+										},
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/addReviews",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"addReviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/allReviews",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"allReviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Reviews by Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64005f980723874a283de825",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewReviewById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewReviewById"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "review",
+											"value": "awesome",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "63f06f49b3e647f387197e33",
+											"type": "text"
+										},
+										{
+											"key": "hotelId",
+											"value": "63f061930234e873cf869ee7",
+											"type": "text"
+										},
+										{
+											"key": "placeId",
+											"value": "63f05afad8f8c80746ba6138",
+											"type": "text"
+										},
+										{
+											"key": "destinationId",
+											"value": "63f057550dcfa4d214352926",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "64005f980723874a283de825",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/updateReviews",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"updateReviews"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "add Booking",
+					"item": [
+						{
+							"name": "add booking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "64004e419f40e8f7e6e0fba2",
+											"type": "text"
+										},
+										{
+											"key": "placeId",
+											"value": "6401a67c04c28cb11aa369a9",
+											"type": "text"
+										},
+										{
+											"key": "hotelId",
+											"value": "6401a6d104c28cb11aa369b2",
+											"type": "text"
+										},
+										{
+											"key": "destinationId",
+											"value": "64004431216dec0f9fb6732b",
+											"type": "text"
+										},
+										{
+											"key": "packageId",
+											"value": "6401b89c8aedd54a1a7c9255",
+											"type": "text"
+										},
+										{
+											"key": "no_of_days",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "no_of_people",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "price_per_day",
+											"value": "15000",
+											"type": "text"
+										},
+										{
+											"key": "total_price",
+											"value": "45000",
+											"type": "text"
+										},
+										{
+											"key": "payment_mode",
+											"value": "cash",
+											"type": "text"
+										},
+										{
+											"key": "booking_date",
+											"value": "02-23-2023",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/addBooking",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"addBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Booking By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401b9608aedd54a1a7c9262",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}admin/viewBookingsById",
+									"host": [
+										"{{baseurl}}admin"
+									],
+									"path": [
+										"viewBookingsById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "packages",
+					"item": [
+						{
+							"name": "all packages",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}customer/allPackages",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"allPackages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view packages by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6400570267ad38006690d029",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewPackagesById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewPackagesById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tranport company",
+					"item": [
+						{
+							"name": "view all transport company",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTransportCompany",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTransportCompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view transport company by id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6401c487657da1daf34eb7c5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTransportCompanyById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTransportCompanyById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tranport company pricing",
+					"item": [
+						{
+							"name": "view all transport company pricing",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewAllTransportCompanypricing",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewAllTransportCompanypricing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view transport company pricing by id Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402ddc0936e1e4317197037",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTransportCompanyPricingById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTransportCompanyPricingById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transport Company orders",
+					"item": [
+						{
+							"name": "view all orders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewallorders",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewallorders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Transport Orders By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6402f697cff6d81de573f2ee",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}customer/viewTransportOrdersById",
+									"host": [
+										"{{baseurl}}customer"
+									],
+									"path": [
+										"viewTransportOrdersById"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,37 @@
+const mongoose=require('mongoose')
+var BookingSchema=mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user',
+        default:null
+    },
+    hotelId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'hotels',
+        default:null
+    },
+    placeId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'places',
+        default:null
+    },
+    destinationId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'destinationCategory',
+        default:null
+    },
+    packageId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'packages',
+        default:null
+    },
+    booking_date:{type:Date,default:Date.now()},
+    no_of_days:{type:Number,default:''},
+    no_of_people:{type:Number,default:''},
+    price_per_day:{type:Number,default:''},
+    total_price:{type:Number,default:''},
+    payment_mode:{type:String,default:''},
+    booking_status:{type:Number,default:1},
+    createdAt:{type:Date,default:Date.now}
+})
+module.exports=mongoose.model('booking',BookingSchema)
